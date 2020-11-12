@@ -1,0 +1,3 @@
+---
+    - name: Generate production app key
+      shell: php artisan key:generate --force chdir="/var/www/snipeit/" 

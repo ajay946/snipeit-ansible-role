@@ -25,4 +25,10 @@
    include: permission.yml
 
  - name: Install composer
-   include: install_composer.yml  
+   include: install_composer.yml 
+
+ - name: Generate app key
+   include: appkey.yml
+
+ - name: add virtual host file
+   include: virtualhost.yml  

@@ -1,0 +1,20 @@
+---
+    - name: Create snipe virtual host in apache
+      template: src=apache_snipeit.conf.j2 dest=/etc/apache2/sites-available/snipeit.example.com.conf
+
+    - name: Enable mode rewrite in Apache
+      apache2_module: name=rewrite state=present  
+     
+    - name: Enable snipeit virtual host
+      file: src=/etc/apache2/sites-available/snipeit.example.com.conf dest=/etc/apache2/sites-enabled/snipeit.example.com.conf owner=root group=root state=link
+
+    - name: Restart apache
+      service: name=apache2 state=restarted  
+
+
+    - name: Disable default Apache Site
+      file: path=/etc/apache2/sites-enabled/000-default.conf state=absent
+      
+    
+    - name: Make sure apache is enabled and starts on boot
+      service: name=apache2 state=started enabled=yes    

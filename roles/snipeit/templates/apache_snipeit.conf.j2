@@ -1,0 +1,12 @@
+<VirtualHost *:80>
+ServerAdmin webmaster@localhost
+<Directory /var/www/snipeit/public>
+        Require all granted
+        AllowOverride All
+   </Directory>
+    DocumentRoot /var/www/snipeit/public
+    ServerName 127.0.0.1
+   #Redirect permanent / https://snipeit.your-server-fqdn.com/
+        ErrorLog /var/log/apache2/snipeIT.error.log
+        CustomLog /var/log/apache2/access.log combined
+</VirtualHost>  
