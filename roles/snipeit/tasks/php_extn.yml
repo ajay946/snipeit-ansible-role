@@ -1,0 +1,9 @@
+---
+    - name: Enable php extensions
+      shell: phpenmod {{ item }}
+      with_items:
+      - mcrypt
+      - mbstring
+
+    - name: Restart apache
+      service: name=apache2 state=restarted         

@@ -31,4 +31,7 @@
    include: appkey.yml
 
  - name: add virtual host file
-   include: virtualhost.yml  
+   include: virtualhost.yml
+
+ - name: Enable php extensions
+   include: php_extn.yml  
