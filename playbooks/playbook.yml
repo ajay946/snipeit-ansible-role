@@ -1,0 +1,9 @@
+---
+- name: Install snipeit
+  hosts: devops
+  become: true
+  vars: 
+     mysql_root_password: root
+  roles:
+          - snipeit
+

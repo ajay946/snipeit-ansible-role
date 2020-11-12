@@ -1,0 +1,7 @@
+---
+    - name: Fix app/storage and public/uploads folders permissions
+      file: path="/var/www/snipeit/app/storage" recurse=yes group=www-data mode=0775
+
+    - name: Fix app/storage and public/uploads folders permissions
+      file: path="/var/www/snipeit/public/uploads" recurse=yes group=www-data mode=0755
+

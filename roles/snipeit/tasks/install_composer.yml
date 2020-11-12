@@ -1,0 +1,3 @@
+---
+    - name: Install php requirements with composer
+      shell: composer install --prefer-source --no-interaction chdir="/var/www/snipeit/"

@@ -1,0 +1,7 @@
+---
+ - name: Create phpinfo.php file
+   copy:
+     dest: "/var/www/html/phpinfo.php"
+     content: |
+         <?php phpinfo(); ?>
+

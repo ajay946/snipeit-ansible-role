@@ -1,0 +1,28 @@
+---
+    - name: Add PHP 7 PPA repository
+      apt_repository:
+        repo: 'ppa:ondrej/php'
+
+    - name: install mysql and php with dependencies
+      apt: pkg={{ item }} state=latest
+      with_items:
+      - git
+      - mysql-server
+      - php7.2
+      - php7.2-mysql
+      - php7.2-gd
+      - php7.2-mbstring
+      - curl
+      - php7.2-curl
+      - python-mysqldb
+      - expect
+      - php7.0-mcrypt
+      - php7.2-bcmath
+      - php7.2-curl
+      - php7.2-gd
+      - php7.2-ldap
+      - php7.2-zip
+      - php7.2-xml   
+
+    - name: start mysql db 
+      service: name=mysql  enabled=yes state=started          

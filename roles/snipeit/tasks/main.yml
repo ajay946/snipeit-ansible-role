@@ -1,0 +1,28 @@
+---
+# tasks file for snipeit
+ - name: to install apache
+   include: apache.yml
+
+ - name: to install php and mysql 
+   include: installpackages.yml
+
+ - name: secure install mysql
+   include: secureinstall.yml
+
+ - name: Add php test page
+   include: phptest.yml
+
+ - name: download and setup composer 
+   include: composer.yml
+
+ - name: clone snipe-it repo
+   include: snipeit_clone.yml
+
+ - name: setup database
+   include: setup_db.yml
+
+ - name: Adjust permissions
+   include: permission.yml
+
+ - name: Install composer
+   include: install_composer.yml  

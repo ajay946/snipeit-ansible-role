@@ -1,0 +1,12 @@
+---
+    - name: Clone snipe-it repo
+      git:
+        repo: https://github.com/snipe/snipe-it
+        dest: /var/www/snipeit
+        update: no
+
+    - name: Copy .env.example to .env
+      shell: cp /var/www/snipeit/.env.example /var/www/snipeit/.env
+
+    - name: Start MySQL server
+      service: name=mysql state=started

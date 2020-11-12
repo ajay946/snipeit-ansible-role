@@ -1,0 +1,12 @@
+---
+    - name: create a new database
+      mysql_db: name=snipeit state=present login_user=root login_password=root
+
+    - name: Create snipeit mysql user
+      mysql_user: name='snipeit' host='localhost' password=root priv=*.*:ALL state=present
+
+    - name: Reload privilege tables
+      command: 'mysql -ne "{{ item }}"'
+      with_items:
+        - FLUSH PRIVILEGES
+      changed_when: False
