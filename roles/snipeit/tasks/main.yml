@@ -21,6 +21,9 @@
  - name: setup database
    include: setup_db.yml
 
+ - name: make changes to .env file
+   include: env.yml
+
  - name: Adjust permissions
    include: permission.yml
 
