@@ -5,5 +5,8 @@
       - mcrypt
       - mbstring
 
+    - name: Enable mode rewrite in Apache
+      apache2_module: name=rewrite state=present        
+
     - name: Restart apache
       service: name=apache2 state=restarted         
