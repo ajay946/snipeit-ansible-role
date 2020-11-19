@@ -1,5 +1,5 @@
 ---
-    - name: Add PHP 7 PPA repository
+    - name: Add PHP 7.2 PPA repository
       apt_repository:
         repo: 'ppa:ondrej/php'
 
