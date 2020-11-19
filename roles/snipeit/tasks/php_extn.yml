@@ -2,7 +2,6 @@
     - name: Enable php extensions
       shell: phpenmod {{ item }}
       with_items:
-      - mcrypt
       - mbstring
 
     - name: Enable mode rewrite in Apache

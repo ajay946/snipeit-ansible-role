@@ -5,7 +5,8 @@ ServerAdmin webmaster@localhost
         AllowOverride All
    </Directory>
     DocumentRoot /var/www/snipeit/public
-    ServerName 127.0.0.1
+    ServerName example.com
+    ServerAlias www.example.com
    #Redirect permanent / https://snipeit.your-server-fqdn.com/
         ErrorLog /var/log/apache2/snipeIT.error.log
         CustomLog /var/log/apache2/access.log combined
