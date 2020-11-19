@@ -3,11 +3,11 @@
  - name: to install apache
    include: apache.yml
 
- - name: to install php and mysql 
-   include: installpackages.yml
-
  - name: secure install mysql
    include: secureinstall.yml
+
+ - name: to install php 
+   include: installpackages.yml
 
  - name: Add php test page
    include: phptest.yml

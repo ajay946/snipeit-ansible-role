@@ -1,4 +1,7 @@
----   
+---  
+    - name: Install mysql server
+      apt: name=mysql-server state=latest
+
     - name: Add .my.cnf
       template: src=/etc/ansible/roles/snipeit/templates/my.cnf.j2 dest=/root/.my.cnf owner=root group=root mode=0600
 

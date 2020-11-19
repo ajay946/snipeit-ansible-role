@@ -3,14 +3,14 @@
       apt_repository:
         repo: 'ppa:ondrej/php'
 
-    - name: install mysql and php with dependencies
+    - name: install php with dependencies
       apt: pkg={{ item }} state=latest
       with_items:
       - git
-      - mysql-server
       - php7.2
       - php7.2-mysql
       - php7.2-gd
+      - php7.2-ldap  
       - php7.2-mbstring
       - php7.2-curl
       - python-mysqldb
